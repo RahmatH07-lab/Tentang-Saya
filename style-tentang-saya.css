@@ -1,0 +1,232 @@
+/* Reset margin dan padding untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya umum halaman */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Kontainer utama */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya Navigasi */
+nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #4CAF50;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #2C6E2F; /* Efek hover pada link */
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #4CAF50;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Bagian Section */
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* Gaya konten dalam setiap section */
+.content {
+    margin-left: 20px;
+}
+
+.content ul {
+    list-style-type: none;
+}
+
+.content ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .section h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+header .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+header .btn:hover {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Container slider */
+.slider-container {
+  width: 100%; /* Atur ukuran lebar container */
+  max-width: 800px; /* Batasi lebar maksimal untuk slider */
+  margin: 0 auto; /* Agar slider berada di tengah */
+  overflow: hidden; /* Menyembunyikan elemen di luar area slider */
+    border-radius: 10px;
+    border: 2px solid #ddd;
+  position: relative; /* Untuk elemen di dalam slider */
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  animation: slide 10s infinite; /* Animasi untuk perpindahan gambar */
+transition: transform 0.5s ease-in-out;
+flex-shrink: 0;
+}
+
+/* Gambar dalam slider */
+.slider img {
+  width: 100%; /* Gambar mengikuti lebar container slider */
+  height: auto; /* Menjaga proporsi asli gambar */
+    max-height: 400px; batas tinggi maks gambar
+  object-fit: cover 
+      object-fit: contain; /* Memastikan gambar terlihat sepenuhnya */
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* Animasi slider */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+    }
+
+/* Responsif untuk layar besar (desktop) */
+@media (min-width: 1024px) {
+    .slider-container {
+        max-width: 1200px; /* Lebar lebih besar di layar desktop */
+    }
+
+    .slider img {
+        max-height: 500px; /* Tinggi lebih besar untuk layar besar */
+    }
+}
+
+/* Responsif untuk layar kecil (ponsel) */
+@media (max-width: 768px) {
+    .slider-container {
+        max-width: 100%; /* Lebar penuh untuk layar kecil */
+    }
+
+    .slider img {
+        max-height: 300px; /* Tinggi lebih kecil untuk layar ponsel */
+    }
+}
